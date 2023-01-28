@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="toneUI/toneUI/App.axaml" value="toneUI/toneUI.Desktop/toneUI.Desktop.csproj" />
+        <entry key="toneUI/toneUI/Views/MainView.axaml" value="toneUI/toneUI.Desktop/toneUI.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
