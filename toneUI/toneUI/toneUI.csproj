@@ -6,16 +6,28 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
-        <TrimmerRootDescriptor Include="Roots.xml"/>
+        <AvaloniaResource Include="Assets\**" />
+        <TrimmerRootDescriptor Include="Roots.xml" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)"/>
-        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)"/>
+        <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="MediaPlayer.Avalonia.Bass" Version="1.0.1" />
+        
+        <PackageReference Include="SharpAudio" Version="1.0.65-beta" />
+        <PackageReference Include="SharpAudio.ALBinding" Version="1.0.65-beta" />
+        <PackageReference Include="SharpAudio.Codec" Version="1.0.65-beta" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)"/>
-        <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
+
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="LibVLCSharp">
+        <HintPath>libs\LibVLCSharp.dll</HintPath>
+      </Reference>
     </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:media="https://github.com/mysteryx93/MediaPlayerUI.NET"
              xmlns:viewModels="clr-namespace:toneUI.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="toneUI.Views.MainView"
@@ -12,7 +13,17 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <viewModels:MainViewModel />
   </Design.DataContext>
+  <Grid  ColumnDefinitions="*" RowDefinitions="*,*"  ShowGridLines="True">
 
-    
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      
+      <Button Command="{Binding StopSoundCommand}" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">StopSound</Button>
+      <!--
+      <media:MediaPlayer Grid.Row="1" Grid.Column="0" x:Name="Player">
+          <media:BassPlayerHost Source="https://file-examples.com/storage/fe0358100863d05afed02d2/2017/11/file_example_MP3_700KB.mp3" />
+      </media:MediaPlayer>
+      -->
+      
+      <Button Command="{Binding PlaySoundCommand}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">PlaySound</Button>
+      
+  </Grid>
 </UserControl>
